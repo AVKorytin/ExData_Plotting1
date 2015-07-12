@@ -16,6 +16,7 @@ UCI_data_subset$Date_and_time <- strptime(paste(UCI_data_subset$Date, UCI_data_s
 
 #Plot 2
 #Time series for Global Active Power
+par(mar = c(5, 5, 4, 1.5))
 with(UCI_data_subset, plot(Date_and_time, Global_active_power, type = "l",
                            ylab = "Global Active Power (kilowatts)", xlab = ""))
 

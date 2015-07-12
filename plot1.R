@@ -16,6 +16,7 @@ UCI_data_subset$Date_and_time <- strptime(paste(UCI_data_subset$Date, UCI_data_s
 
 #Plot 1
 #Histogram for Global Active Power
+par(mar = c(5, 5, 4, 1.5))
 hist(UCI_data_subset$Global_active_power, col = "red", main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)")
 

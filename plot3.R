@@ -19,7 +19,7 @@ UCI_data_subset$Date_and_time <- strptime(paste(UCI_data_subset$Date, UCI_data_s
 with(UCI_data_subset, plot(Date_and_time, Sub_metering_1, type = "n",
                            ylab = "Energy sub metering", xlab = ""))
 #Adding time series
-with(UCI_data_subset, lines(Date_and_time, Sub_metering_1))
+with(UCI_data_subset, lines(Date_and_time, Sub_metering_1, col = "black"))
 with(UCI_data_subset, lines(Date_and_time, Sub_metering_2, col = "red"))
 with(UCI_data_subset, lines(Date_and_time, Sub_metering_3, col = "blue"))
 
