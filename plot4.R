@@ -16,7 +16,7 @@ UCI_data_subset$Date_and_time <- strptime(paste(UCI_data_subset$Date, UCI_data_s
 
 #Plot 4
 #Multiple plot
-par(mfcol = c(2, 2))
+par(mfcol = c(2, 2), mar = c(2, 4.5, 2, 1.5))
 
 #First plot
 with(UCI_data_subset, plot(Date_and_time, Global_active_power, type = "l",
@@ -29,7 +29,7 @@ with(UCI_data_subset, lines(Date_and_time, Sub_metering_1))
 with(UCI_data_subset, lines(Date_and_time, Sub_metering_2, col = "red"))
 with(UCI_data_subset, lines(Date_and_time, Sub_metering_3, col = "blue"))
 legend("topright", lty = "solid", lwd = 1, col = c("black", "red", "blue"),
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
 
 #Third plot
 with(UCI_data_subset, plot(Date_and_time, Voltage, type = "l", xlab = "datetime"))
